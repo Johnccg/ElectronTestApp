@@ -11,8 +11,15 @@ Código en main
 const { app, BrowserWindow } = require('electron');
     Importa los elementos del proceso principal
         App maneja el ciclo de vida de la aplicación y utiliza eventos
-        BrowserWindow es el proceso de renderizado y es una tab
+            Solo puede haber 1
+        BrowserWindow en un objeto que representa una ventana
+            Se pueden instanciar varios
 
+Al instanciar una ventana se pueden definir preferencias
+webPreferences: {
+            nodeIntegration: true, //Permite acceder a elementos globales de Node desde el código
+            preload: path.join(__dirname, 'preload.js'), //Ejecuta un script antes de cargar una ventana
+        }
 
 Electron Forge: Framework de desarrollo para electron
 
