@@ -2,24 +2,19 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Hello World!</title>
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
-    <link rel="stylesheet" href="index.css" />
-
-    <script defer src="render.js"></script>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <title>Hello from Electron renderer!</title>
   </head>
   <body>
-    <h1>Electron screen recorder</h1>
-
-    <video></video>
-
-    <button id="StartBtn" class="button is-primary">Start</button>
-    <button id="StopBtn" class="button is-warning">Stop</button>
-
-    <hr>
-
-    <button id="VideoSelBtn" class="button is-text">Choose a video source</button>
-
+    <h1>Hello from Electron renderer!</h1>
+    <p>👋</p>
   </body>
 </html>
